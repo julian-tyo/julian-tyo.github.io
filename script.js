@@ -107,6 +107,16 @@ filterBtns.forEach((btn) =>
   })
 );
 
+// ===== Watch Video buttons: no link yet -> "coming soon" =====
+document.querySelectorAll(".video-btn").forEach((btn) => {
+  if (!btn.getAttribute("href")) {
+    btn.classList.add("soon");
+    btn.removeAttribute("href");
+    btn.setAttribute("aria-disabled", "true");
+    btn.lastChild.textContent = " Video coming soon";
+  }
+});
+
 // ===== Download CV: use the PDF if it exists, otherwise open the online CV =====
 const cvBtn = document.getElementById("cvBtn");
 fetch(cvBtn.getAttribute("href"), { method: "HEAD" })

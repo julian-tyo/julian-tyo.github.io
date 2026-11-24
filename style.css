@@ -202,6 +202,23 @@ img { max-width: 100%; display: block; }
 .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; }
 .tags span { font-size: 0.74rem; padding: 3px 10px; border-radius: 6px; border: 1px solid var(--border); color: var(--muted); }
 
+.video-btn {
+  margin-top: 16px; display: flex; align-items: center; justify-content: center; gap: 10px;
+  padding: 11px 16px; border-radius: 12px; font-size: 0.88rem; font-weight: 600; color: #fff;
+  background: linear-gradient(135deg, #8b5cf6, #6366f1); box-shadow: 0 8px 22px rgba(139, 92, 246, 0.3);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.video-btn:hover { transform: translateY(-2px); box-shadow: 0 12px 28px rgba(139, 92, 246, 0.5); }
+.video-btn .play {
+  width: 24px; height: 24px; display: grid; place-items: center; border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2); font-size: 0.65rem; padding-left: 2px;
+}
+.video-btn.soon {
+  background: var(--card); color: var(--muted); border: 1px dashed var(--border);
+  box-shadow: none; cursor: default; pointer-events: none;
+}
+.video-btn.soon .play { background: rgba(139, 92, 246, 0.15); color: var(--violet-2); }
+
 /* timeline */
 .timeline { position: relative; padding-left: 34px; display: grid; gap: 26px; }
 .timeline::before { content: ""; position: absolute; left: 7px; top: 8px; bottom: 8px; width: 2px; background: linear-gradient(var(--violet), var(--cyan)); border-radius: 2px; }
