@@ -47,6 +47,8 @@ const roles = [
   "Video Editor",
   "AI Content Creator",
   "Marketplace Specialist",
+  "Admin & Marketplace Staff",
+  "Administrative Staff",
 ];
 const typed = document.getElementById("typed");
 let r = 0, c = 0, deleting = false;
