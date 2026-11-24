@@ -107,4 +107,15 @@ filterBtns.forEach((btn) =>
   })
 );
 
+// ===== Download CV: use the PDF if it exists, otherwise open the online CV =====
+const cvBtn = document.getElementById("cvBtn");
+fetch(cvBtn.getAttribute("href"), { method: "HEAD" })
+  .then((res) => { if (!res.ok) throw 0; })
+  .catch(() => {
+    cvBtn.href = "https://julianporto.my.canva.site/";
+    cvBtn.removeAttribute("download");
+    cvBtn.target = "_blank";
+    cvBtn.rel = "noopener";
+  });
+
 document.getElementById("year").textContent = new Date().getFullYear();

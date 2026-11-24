@@ -120,6 +120,10 @@ img { max-width: 100%; display: block; }
 .btn.primary:hover { transform: translateY(-2px); box-shadow: 0 14px 38px rgba(139, 92, 246, 0.55); }
 .btn.ghost { border: 1px solid rgba(139, 92, 246, 0.45); color: var(--text); background: var(--card); }
 .btn.ghost:hover { background: rgba(139, 92, 246, 0.15); transform: translateY(-2px); }
+.cv-btn { border-color: rgba(56, 189, 248, 0.45); }
+.cv-btn svg { color: var(--cyan); transition: transform 0.25s; }
+.cv-btn:hover { background: rgba(56, 189, 248, 0.12); }
+.cv-btn:hover svg { transform: translateY(2px); }
 
 .hero-photo { display: flex; justify-content: center; }
 .photo-card {
