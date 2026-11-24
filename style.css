@@ -183,8 +183,9 @@ img { max-width: 100%; display: block; }
 .project { padding: 0; overflow: hidden; display: flex; flex-direction: column; transition: transform 0.3s, border-color 0.3s; }
 .project:hover { transform: translateY(-6px); border-color: rgba(139, 92, 246, 0.5); }
 .project.hide { display: none; }
-.thumb { position: relative; aspect-ratio: 16 / 10; overflow: hidden; }
-.thumb img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; z-index: 1; }
+.thumb { position: relative; aspect-ratio: 1 / 1; overflow: hidden; }
+.thumb img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 30%; transition: transform 0.5s; z-index: 1; }
+.thumb::after { content: ""; position: absolute; inset: auto 0 0 0; height: 30%; background: linear-gradient(transparent, rgba(7, 6, 15, 0.55)); z-index: 2; pointer-events: none; }
 .project:hover .thumb img { transform: scale(1.06); }
 .thumb span { position: absolute; right: 16px; bottom: 6px; font-size: 3.6rem; font-weight: 800; color: rgba(255, 255, 255, 0.22); }
 .t1 { background: linear-gradient(135deg, #7c3aed, #db2777); }
