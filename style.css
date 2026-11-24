@@ -167,7 +167,8 @@ img { max-width: 100%; display: block; }
 .track span { white-space: nowrap; font-size: 0.9rem; padding: 8px 16px; border-radius: 10px; border: 1px solid var(--border); background: var(--card); }
 @keyframes scroll { to { transform: translateX(calc(-50% - 6px)); } }
 
-.skills { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 50px; }
+.skills { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 50px; }
+@media (max-width: 1100px) { .skills { grid-template-columns: repeat(2, 1fr); } }
 .skill { transition: transform 0.3s, border-color 0.3s; }
 .skill:hover { transform: translateY(-6px); border-color: rgba(139, 92, 246, 0.5); }
 .skill-icon { width: 52px; height: 52px; display: grid; place-items: center; font-size: 1.5rem; border-radius: 14px; background: rgba(139, 92, 246, 0.15); margin-bottom: 18px; }
